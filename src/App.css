@@ -1,38 +1,115 @@
-.App {
+.App{
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgba(252, 250, 133, 0.425);
+}
+.header {
   text-align: center;
+  margin: 5vh 20vw;
+  padding: 0;
+}
+.list{
+ height: 75vh;
+ overflow-y:scroll ;
+
+}
+.list>p{
+  background-color: white;
+  border: black solid 3px;
+  border-radius: 5px;
+  margin: 3vh 10vw;
+  padding: 0.5rem 1rem;
+
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.list>p:hover{
+  cursor: pointer;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.add{
+  position: relative;
+  bottom: 8vh;
+  right: -2vw;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.add-off{
+  background-color: red;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  padding-top: 0.2rem;
+  padding-left: 0.2rem;
+  padding-right: 0.2rem;
   color: white;
+  border-radius: 50%;
+  border: black solid 2px;
 }
 
-.App-link {
-  color: #61dafb;
+.add-off:hover{
+  background-color: rgb(252, 82, 82);
+  cursor: pointer;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.add-on{
+  display: flexbox;
+  flex-direction: column;
+  margin-top: -16vh;
+  background-color: white;
+  width: 80vw;
+  height: 14vh;
+  border: black solid 3px;
+  border-radius: 1rem;
+  padding: 1rem;
+  padding-bottom: 3rem;
+  
+
+}
+
+.add-button{
+ background-color: rgba(127, 127, 185, 0.815);
+ width: 10%;
+ justify-self: center;
+ border-radius: 10px;
+ padding-left: 0.5rem;
+ margin-top: 0.5rem;
+ padding-right: 1rem;
+ border: black solid 2px;
+}
+
+.add-button:hover{
+  cursor: pointer;
+  background-color: rgba(127, 127, 185, 0.815);
+}
+
+.error{
+  position:absolute;
+  left: 34%;
+  bottom: 24%;
+  background-color: red;
+  border: black solid 2px;
+  width: 30%;
+  padding: 0rem;
+}
+
+@media screen and (min-width:720px) {
+  .error{
+    left:1.5rem;
+    bottom:57%;
+    width: 20%;
   }
-  to {
-    transform: rotate(360deg);
+  .add-on{
+    width: 30vw;
   }
+
+  .list>p{
+    margin: 3vh 30vw;
+  }
+  .list{
+    height: 80vh;
+    overflow-y:scroll ;
+   
+   }
+   .add-button{
+    margin-top: 0rem;
+    padding-right: 0rem;
+    width: 3rem;
+   }
 }
